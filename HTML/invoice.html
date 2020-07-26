@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A simple, clean, and responsive HTML invoice template</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="invoice-box">
+      <!-- *****Outer table***** -->
+        <table id="main-table" cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="" style="width:100%; max-width:300px;">
+                            </td>
+
+                            <td>
+                                Invoice #: 123<br>
+                                Created: January 1, 2015<br>
+                                Due: February 1, 2015
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                Sparksuite, Inc.<br>
+                                12345 Sunny Road<br>
+                                Sunnyville, CA 12345
+                            </td>
+
+                            <td>
+                                Acme Corp.<br>
+                                John Doe<br>
+                                john@example.com
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                </td>
+            </tr>
+
+            <!-- *****Outer table row for payment method***** -->
+            <tr class="heading">
+                <td>
+                    Payment Method
+                </td>
+
+                <td>
+                    Check #
+                </td>
+                <td>
+                </td>
+            </tr>
+
+            <tr class="details">
+                <td>
+                    <select class="Paymode" name="">
+                      <option value="upi"> <strong>UPI(Google Pay/ PhonePe / BHIM)</strong> </option>
+                      <option value="cr_card"> <strong>Credit Card</strong> </option>
+                      <option value="dr_card"> <strong>Debit Card</strong> </option>
+                      <option value="netbk"> <strong>Net Banking</strong> </option>
+                      <option value="check"> <strong>Check</strong> </option>
+                      <option value="cash"> <strong>Cash</strong> </option>
+                    </select>
+                </td>
+
+                <td>
+                    $<input class="amt_align" type="text" name="amount" placeholder="00.0" width="1px">
+                </td>
+                <td>
+                </td>
+            </tr>
+
+            <!-- *****Outer table heading row for Item's***** -->
+            <tr class="heading">
+                <td colspan="4">
+                    <table>
+                      <tr>
+                        <td>
+                            Item
+                        </td>
+
+                        <td>
+                          Quantity
+                        </td>
+
+                        <td>
+                          Price
+                        </td>
+
+                        <td>
+                        </td>
+                      </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr class="Item">
+              <td colspan="3">
+                  <table>
+                    <tr>
+                      <td>
+                          <input name="product" type="text" value="">
+                      </td>
+
+                      <td>
+                        <input name="quantity" type="number" min="1">
+                      </td>
+
+                      <td>
+                        $<input name="amount" type="text" placeholder="0.00">
+                      </td>
+                    </tr>
+                  </table>
+              </td>
+              <td>
+                <span id="first-btn" onclick="deleteRow(this)" hidden>x</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button type="button" id="add-button">Add item</button>
+              </td>
+            </tr>
+
+        </table>
+    </div>
+    <!-- *****JavaScript***** -->
+    <script type="text/javascript" src="../static/js/invoice.js"></script>
+</body>
+</html>
