@@ -12,25 +12,29 @@ function hideDeleteBtn() {
 
   // *****Hide delete button if table row is greater than one***** //
   if(trLength.length > 1) {
-    let hideButton = document.getElementById("first-btn");
+    let hideButton = document.getElementById("hide-btn");
     hideButton.removeAttribute("hidden");
     hideButton.style.visibility = "visible";
   }else {
-    let hideButton = document.getElementById("delete-btn");
-    hideButton.removeAttribute("id");
-    hideButton.setAttribute("id", "first-btn");
+    let hideButton = document.getElementById("hide-btn");
+    // hideButton.removeAttribute("id");
+    // hideButton.setAttribute("id", "first-btn");
     // console.log(hideButton);
     hideButton.style.visibility = "hidden";
   }
 }
 
 // *****Function to add new Item row***** //
+var rowNo = 5;
+
+
 function addNewItem() {
   // *****Get Outer table and insert new row and cell's***** //
   let mainTable = document.getElementById("main-table");
 
   // *****Added new row in outer table***** //
-  let addNewRow = mainTable.insertRow(5);
+  let addNewRow = mainTable.insertRow(++rowNo);
+  // console.log(rowNo);
   addNewRow.setAttribute("class", "Item");
 
   // *****Added new 1st cell to outer table***** //
@@ -59,6 +63,7 @@ function addNewItem() {
 
   // *****Inner table 3rd row for item amount***** //
   let cell3 = row.insertCell(2);
+  cell3.innerHTML = "$ ";
   let priceInput = document.createElement("input");
   priceInput.setAttribute("name", "amount");
   priceInput.setAttribute("placeholder", "0.00");
@@ -69,7 +74,7 @@ function addNewItem() {
   let addNewCell2 = addNewRow.insertCell(1);
   let button = document.createElement("span");
   button.setAttribute("onclick", "deleteRow(this)");
-  button.setAttribute("id", "delete-btn");
+  button.setAttribute("id", "hide-btn");
   button.innerHTML = "x";
   addNewCell2.appendChild(button);
 
@@ -84,5 +89,7 @@ function deleteRow(btnNo) {
   deleteTd = btnNo.parentNode;
   deleteTd.parentElement.remove();
   hideDeleteBtn();
+  rowNo--
+  // console.log(rowNo);
   // console.log(deleteTd);
 }

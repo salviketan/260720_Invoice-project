@@ -121,13 +121,13 @@
                       </td>
 
                       <td>
-                        $<input name="amount" type="text" placeholder="0.00">
+                        $ <input name="amount" type="text" placeholder="0.00">
                       </td>
                     </tr>
                   </table>
               </td>
               <td>
-                <span id="first-btn" onclick="deleteRow(this)" hidden>x</span>
+                <span id="hide-btn" onclick="deleteRow(this)" hidden>x</span>
               </td>
             </tr>
 
@@ -137,8 +137,11 @@
               </td>
             </tr>
 
+            <button onclick="window.print()">Print This Page</button>
         </table>
     </div>
+
+
     <!-- *****JavaScript***** -->
     <script type="text/javascript" src="../static/js/invoice.js"></script>
 </body>

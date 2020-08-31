@@ -53,9 +53,9 @@
     border-bottom: 1px solid #eee;
 }
 
-.invoice-box table tr.item.last td {
-    border-bottom: none;
-}
+/* .invoice-box table tr.item.last td { */
+    /* border-bottom: none; */
+/* } */
 
 .invoice-box table tr.total td:nth-child(2) {
     border-top: 2px solid #eee;
