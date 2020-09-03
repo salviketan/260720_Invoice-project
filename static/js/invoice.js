@@ -91,3 +91,9 @@ function deleteRow(btnNo) {
   // console.log(rowNo);
   // console.log(deleteTd);
 }
+
+// *****Function to print/save invoice in pdf format***** //
+function printPdf(){
+  console.log("Add print pdf fuctinallilty")
+  // window.print();
+}
