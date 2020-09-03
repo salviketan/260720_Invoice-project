@@ -2,8 +2,6 @@
 let addItemButton = document.querySelector("#add-button");
 addItemButton.addEventListener("click", addNewItem);
 
-// function createTable() {
-// }
 
 // *****Function to hide first row's delete button***** //
 function hideDeleteBtn() {
