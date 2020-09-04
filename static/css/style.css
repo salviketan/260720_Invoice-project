@@ -1,7 +1,7 @@
 .invoice-box {
-    max-width: 800px;
+    max-width: 790px;
     margin: auto;
-    padding: 30px;
+    padding: 15px;
     border: 1px solid #eee;
     box-shadow: 0 0 10px rgba(0, 0, 0, .15);
     font-size: 16px;    /*not need*/
@@ -12,7 +12,13 @@
 
 .invoice-box table {
     width: 100%;
-    line-height: inherit;   /*not need*/
+    /* line-height: inherit;*/
+}
+
+div#table {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px 30px 0px 30px;
 }
 
 .invoice-box table td {
@@ -103,6 +109,15 @@
 span:hover{
   cursor: default;
   color: #f43c2f;
+}
+
+button#add-button {
+    position: relative;
+    left: 6%;
+}
+button.createPdf {
+    position: relative;
+    left: 43.2%;
 }
 /******** -----End----- ********/
 

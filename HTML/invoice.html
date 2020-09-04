@@ -7,137 +7,137 @@
 </head>
 
 <body>
-    <div class="invoice-box">
-      <!-- *****Outer table***** -->
-        <table id="main-table" cellpadding="0" cellspacing="0">
-            <tr class="top">
-                <td colspan="2">
-                    <table>
-                        <tr>
-                            <td class="title">
-                                <img src="..\..\..\wallpapers\google_profile.png" style="width:100%; max-width:150px;">
-                            </td>
-
-                            <td>
-                                Invoice #: 123<br>
-                                Created: January 1, 2015<br>
-                                Due: February 1, 2015
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                </td>
-            </tr>
-
-            <tr class="information">
-                <td colspan="2">
-                    <table>
-                        <tr>
-                          <td>
-                            <textarea id="sender" rows="4" cols="18" placeholder="From">Sparksuite, Inc. 12345 Sunny Road Sunnyville, CA 12345</textarea>
+  <div class="invoice-box">
+    <!-- *****Outer table***** -->
+    <div id="table">
+      <table id="main-table" cellpadding="0" cellspacing="0">
+          <tr class="top">
+              <td colspan="2">
+                  <table>
+                      <tr>
+                          <td class="title">
+                              <img src="..\..\..\wallpapers\google_profile.png" style="width:100%; max-width:150px;">
                           </td>
 
                           <td>
-                            <textarea id="receiver" rows="4" cols="18" placeholder="To">Acme Corp. John Doe john@example.com</textarea>
+                              Invoice #: 123<br>
+                              Created: January 1, 2015<br>
+                              Due: February 1, 2015
                           </td>
-                        </tr>
-                    </table>
-                </td>
-                <td>
-                </td>
-            </tr>
+                      </tr>
+                  </table>
+              </td>
+              <td>
+              </td>
+          </tr>
 
-            <!-- *****Outer table row for payment method***** -->
-            <tr class="heading">
-                <td>
-                    Payment Method
-                </td>
-
-                <td>
-                    Check #
-                </td>
-                <td>
-                </td>
-            </tr>
-
-            <tr class="details">
-                <td>
-                    <select class="Paymode" name="">
-                      <option value="upi"> <strong>UPI(Google Pay/ PhonePe / BHIM)</strong> </option>
-                      <option value="cr_card"> <strong>Credit Card</strong> </option>
-                      <option value="dr_card"> <strong>Debit Card</strong> </option>
-                      <option value="netbk"> <strong>Net Banking</strong> </option>
-                      <option value="check"> <strong>Check</strong> </option>
-                      <option value="cash"> <strong>Cash</strong> </option>
-                    </select>
-                </td>
-
-                <td>
-                    $<input class="amt_align" type="text" name="amount" placeholder="00.0" width="1px">
-                </td>
-                <td>
-                </td>
-            </tr>
-
-            <!-- *****Outer table heading row for Item's***** -->
-            <tr class="heading">
-                <td colspan="4">
-                    <table>
+          <tr class="information">
+              <td colspan="2">
+                  <table>
                       <tr>
                         <td>
-                            Item
+                          <textarea id="sender" rows="4" cols="18" placeholder="From">Sparksuite, Inc. 12345 Sunny Road Sunnyville, CA 12345</textarea>
                         </td>
 
                         <td>
-                          Quantity
-                        </td>
-
-                        <td>
-                          Price
-                        </td>
-
-                        <td>
+                          <textarea id="receiver" rows="4" cols="18" placeholder="To">Acme Corp. John Doe john@example.com</textarea>
                         </td>
                       </tr>
-                    </table>
-                </td>
-            </tr>
+                  </table>
+              </td>
+              <td>
+              </td>
+          </tr>
 
-            <tr class="Item">
-              <td colspan="3">
+          <!-- *****Outer table row for payment method***** -->
+          <tr class="heading">
+              <td>
+                  Payment Method
+              </td>
+
+              <td>
+                  Check #
+              </td>
+              <td>
+              </td>
+          </tr>
+
+          <tr class="details">
+              <td>
+                  <select class="Paymode" name="">
+                    <option value="upi"> <strong>UPI(Google Pay/ PhonePe / BHIM)</strong> </option>
+                    <option value="cr_card"> <strong>Credit Card</strong> </option>
+                    <option value="dr_card"> <strong>Debit Card</strong> </option>
+                    <option value="netbk"> <strong>Net Banking</strong> </option>
+                    <option value="check"> <strong>Check</strong> </option>
+                    <option value="cash"> <strong>Cash</strong> </option>
+                  </select>
+              </td>
+
+              <td>
+                  $<input class="amt_align" type="text" name="amount" placeholder="00.0" width="1px">
+              </td>
+              <td>
+              </td>
+          </tr>
+
+          <!-- *****Outer table heading row for Item's***** -->
+          <tr class="heading">
+              <td colspan="4">
                   <table>
                     <tr>
                       <td>
-                          <input name="product" type="text" value="">
+                          Item
                       </td>
 
                       <td>
-                        <input name="quantity" type="number" min="1">
+                        Quantity
                       </td>
 
                       <td>
-                        $ <input name="amount" type="text" placeholder="0.00">
+                        Price
+                      </td>
+
+                      <td>
                       </td>
                     </tr>
                   </table>
               </td>
-              <td>
-                <span id="hide-btn" onclick="deleteRow(this)" hidden>x</span>
-              </td>
-            </tr>
+          </tr>
 
-            <tr>
-              <td>
-                <button type="button" id="add-button">Add item</button>
-              </td>
-            </tr>
-        </table>
-        <button onclick="printPdf()">Print This Page</button>
+          <tr class="Item">
+            <td colspan="3">
+                <table>
+                  <tr>
+                    <td>
+                        <input name="product" type="text" value="">
+                    </td>
+
+                    <td>
+                      <input name="quantity" type="number" min="1">
+                    </td>
+
+                    <td>
+                      $ <input name="amount" type="text" placeholder="0.00">
+                    </td>
+                  </tr>
+                </table>
+            </td>
+            <td>
+              <span id="hide-btn" onclick="deleteRow(this)" hidden>x</span>
+            </td>
+          </tr>
+      </table>
+      <br>
     </div>
-
-
+    <button type="button" id="add-button">Add item</button> <br> <br>
+    <button class="createPdf">Print This Page</button>
+  </div>
     <!-- *****JavaScript***** -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     <script type="text/javascript" src="../static/js/invoice.js"></script>
+    <!-- <script type="text/javascript" src="../static/js/pdfconvert.js"></script> -->
+
 </body>
 </html>
