@@ -3,6 +3,7 @@ let addItemButton = document.querySelector("#add-button");
 addItemButton.addEventListener("click", addNewItem);
 
 
+
 // *****Function to hide first row's delete button***** //
 function hideDeleteBtn() {
   let trLength = document.querySelectorAll("tr.Item");
@@ -38,6 +39,7 @@ function addNewItem() {
   // *****Added new 1st cell to outer table***** //
   let addNewCell1 = addNewRow.insertCell(0);
   addNewCell1.setAttribute("colspan", "3");
+  addNewCell1.setAttribute("style", "border-bottom:1px solid #eee")
   // let rowTable = createTable();
   // console.log(rowTable);
 
@@ -91,31 +93,3 @@ function deleteRow(btnNo) {
   // console.log(rowNo);
   // console.log(deleteTd);
 }
-
-
-// ***** Written in jQuery ***** //
-// *****Function to print/save invoice in pdf format***** //
-$(document).ready(() => {
-  
-  let specialElementHandlers = {
-    '#editor':(element, renderer) => {
-      return true;
-    }
-  };
-
-  $(".createPdf").click(() => {
-    let doc = new jsPDF();
-    pdfContent = $("#table").html();
-    
-    doc.fromHTML(pdfContent, 15, 15, {
-      'width': 170,
-      'elementHandlers': specialElementHandlers
-    });
-
-    // ***** Save the PDF ***** //
-    doc.save('YourInvoie.pdf')
-    console.log("Add print pdf fuctinallilty");
-
-  })
-
-});
