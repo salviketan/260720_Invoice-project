@@ -16,12 +16,13 @@
 }
 
 .invoice-box table td {
-    padding: 5px;
+    padding: 5px 0px 5px 0px;
     vertical-align: top;
 }
 
 .invoice-box table tr td:nth-child(2) {
     text-align: right;
+    vertical-align: middle;
 }
 
 .invoice-box table tr.top table td {
@@ -68,31 +69,61 @@
 
 /******** My CSS Change ********/
 
+.invoice-box table tr:nth-child(3) td:nth-child(2){
+    padding-right: 100px;
+}
+
 .invoice-box table tr.heading td table tr td:nth-child(2){
-    padding-left: 20px;
-    text-align: center;
+    padding-left: 116px;
+    text-align: right;
 }
 
 .invoice-box table tr.heading td table tr td:nth-child(3){
-    text-align: center;
+    text-align: right;
+    padding-right: 66px;
 }
+
+/* .invoice-box table tr.Item td table tr td {
+    width: 220;
+    height: 24;
+} */
 
 .invoice-box table tr.Item td table tr td:nth-child(2){
     text-align: center;
-    padding-left: 120px;
 }
 
 .invoice-box table tr.Item td table tr td:nth-child(3){
     text-align: center;
-    padding-left: 100px;
+    vertical-align: middle;
 }
 
-.invoice-box table tr.Item td table tr td:nth-child(4){
+/* .invoice-box table tr.Item td table tr td:nth-child(4){
     text-align: right;
+} */
+
+/* textarea[name=product] {
+    text-align: left;
+    width: 360px;
+    height: 29px;
+} */
+input[name=product] {
+    text-align: left;
+    width: 328px;
+    height: 17px;
 }
 
-.invoice-box table tr.Item td table tr td input {
-    max-width: 100px;
+textarea {
+    resize: none;
+}
+
+textarea, input, select.Paymode {
+    font-size: 13px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: #555;
+}
+select.Paymode {
+    width: 253px;
+    height: 25px;
 }
 
 span:hover{
@@ -109,9 +140,45 @@ button#createpdf {
     left: 43.2%;
 }
 
+input {
+    padding: 1px;
+}
+
+.invoice-box table tr.details td input{
+    width: 188px;
+    margin-right: 40px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input[type='file'] {
+    color: white;
+}
+
+img#myImg {
+    font-size: 16px;
+}
+
 @media print {
     .forScreen {
         visibility: hidden;
+    }
+    span#hide-btn {
+        display: none;
+    }
+
+    input[type='file'] {
+        display: none;
     }
 
     .invoice-box {
@@ -119,38 +186,25 @@ button#createpdf {
         box-shadow: 0 0 10px rgba(255, 255, 255, .15);
     }
 
-    textarea {
+    textarea, input, select.Paymode {
         border: none;
-        width: 180px;
-        font-size: 17.42px;
-        line-height: 24px;
+        font-size: 16px;
         font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
         color: #555;
-        resize: none;
     }
 
-    /* textarea#invoiceno {
-        font-size: 17.5;
-    } */
-    
-    input {
-        border: none;
-        width: 113px;
-        text-align: right;
-        font-size: 16px;
+    textarea {
+        width: 180px;
         line-height: 24px;
-        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-        color: #555;
-        -webkit-appearance: none;
-        -moz-appearance: none;
     }
     
+    input {
+        /* width: 150px; */
+        text-align: center;
+        line-height: 24px;
+    }
+
     select.Paymode {
-        border: none;
-        width: 230px;
-        height: 25px;
-        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-        color: #555;
         -webkit-appearance: none;
     }
 

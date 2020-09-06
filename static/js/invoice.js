@@ -39,7 +39,7 @@ function addNewItem() {
   // *****Added new 1st cell to outer table***** //
   let addNewCell1 = addNewRow.insertCell(0);
   addNewCell1.setAttribute("colspan", "3");
-  addNewCell1.setAttribute("style", "border-bottom:1px solid #eee")
+  addNewCell1.setAttribute("style", "border-bottom:2px solid #eee")
   // let rowTable = createTable();
   // console.log(rowTable);
 
@@ -63,8 +63,8 @@ function addNewItem() {
 
   // *****Inner table 3rd row for item amount***** //
   let cell3 = row.insertCell(2);
-  cell3.innerHTML = "$ ";
   let priceInput = document.createElement("input");
+  priceInput.value = "$"; 
   priceInput.setAttribute("name", "amount");
   priceInput.setAttribute("placeholder", "0.00");
   cell3.appendChild(priceInput);

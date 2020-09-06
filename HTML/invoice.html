@@ -15,7 +15,8 @@
           <table>
             <tr>
               <td class="title">
-                <img src="..\..\..\wallpapers\google_profile.png" style="width:100%; max-width:150px;">
+                <img id="myImg" src="#" alt="Upload img" style = "width:100%; max-width: 260px; height: 130px;"><br>
+                <input type='file' >
               </td>
 
               <td>
@@ -63,18 +64,18 @@
 
       <tr class="details">
         <td>
-            <select class="Paymode" name="">
-              <option value="upi"> <strong>UPI(Google Pay/ PhonePe / BHIM)</strong> </option>
-              <option value="cr_card"> <strong>Credit Card</strong> </option>
-              <option value="dr_card"> <strong>Debit Card</strong> </option>
-              <option value="netbk"> <strong>Net Banking</strong> </option>
-              <option value="check"> <strong>Check</strong> </option>
-              <option value="cash"> <strong>Cash</strong> </option>
-            </select>
+          <select class="Paymode" name="">
+            <option value="upi"> <strong>UPI(Google Pay/ PhonePe / BHIM)</strong> </option>
+            <option value="cr_card"> <strong>Credit Card</strong> </option>
+            <option value="dr_card"> <strong>Debit Card</strong> </option>
+            <option value="netbk"> <strong>Net Banking</strong> </option>
+            <option value="check"> <strong>Check</strong> </option>
+            <option value="cash"> <strong>Cash</strong> </option>
+          </select>
         </td>
 
         <td>
-          $<input class="amt_align" type="text" name="amount" placeholder="00.0" width="1px">
+          <input class="amt_align" type="text" name="amount" placeholder="00.0" width="1px" value="$3">
         </td>
         <td>
         </td>
@@ -102,19 +103,20 @@
       </tr>
 
       <tr class="Item" >
-        <td colspan="3" style="border-bottom:1px solid #eee";>
+        <td colspan="3" style="border-bottom:2px solid #eee";>
           <table>
             <tr>
               <td>
-                <input name="product" type="text" value="">
+                <input type="text" name="product" value="jflaksfjkls">
+                <!-- <textarea name="product" cols="40" rows="2"></textarea> -->
               </td>
 
               <td>
-                <input name="quantity" type="number" min="1">
+                <input class="quantity" name="quantity" type="number" min="1" value="3" >
               </td>
 
               <td>
-                $ <input name="amount" type="text" placeholder="0.00">
+                <input class="amount" name="amount" type="text" placeholder="0.00" value="$3">
               </td>
             </tr>
           </table>
