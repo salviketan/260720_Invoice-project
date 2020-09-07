@@ -1,21 +1,22 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>A simple, clean, and responsive HTML invoice template</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+  <meta charset="utf-8">
+  <title>A simple, clean, and responsive HTML invoice template</title>
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
   <div class="invoice-box">
     <!-- *****Outer table***** -->
     <table id="main-table" cellpadding="0" cellspacing="0">
+      <!-- *****Outer table Row-1***** -->
       <tr class="top">
         <td colspan="2">
           <table>
             <tr>
               <td class="title">
-                <img id="myImg" src="#" alt="Upload img" style = "width:100%; max-width: 260px; height: 130px;"><br>
+                <img id="myImg" src="#" alt="Upload img"><br>
                 <input type='file' >
               </td>
 
@@ -28,7 +29,7 @@
         <td>
         </td>
       </tr>
-
+      <!-- *****Outer table Row-2***** -->
       <tr class="information">
         <td colspan="2">
           <table>
@@ -46,7 +47,7 @@
         <td>
         </td>
       </tr>
-
+      <!-- *****Outer table Row-3***** -->
       <!-- *****Outer table row for payment method***** -->
       <tr class="heading" >
         <td style ="border-bottom: 2px solid #ddd;">
@@ -56,12 +57,11 @@
         <td style ="border-bottom: 2px solid #ddd;">
           Check #
         </td>
-        
-        <td style ="border-bottom: 2px solid #ddd;">
 
+        <td style ="border-bottom: 2px solid #ddd;">
         </td>
       </tr>
-
+      <!-- *****Outer table Row-4***** -->
       <tr class="details">
         <td>
           <select class="Paymode" name="">
@@ -77,10 +77,11 @@
         <td>
           <input class="amt_align" type="text" name="amount" placeholder="00.0" width="1px" value="$3">
         </td>
+
         <td>
         </td>
       </tr>
-
+      <!-- *****Outer table Row-5***** -->
       <!-- *****Outer table heading row for Item's***** -->
       <tr class="heading" >
         <td colspan="3" style ="border-bottom: 2px solid #ddd;">
@@ -101,20 +102,19 @@
           </table>
         </td>
       </tr>
-
+      <!-- *****Outer table Row-6***** -->
       <tr class="Item" >
         <td colspan="3" style="border-bottom:2px solid #eee";>
           <table>
             <tr>
               <td>
                 <input type="text" name="product" value="jflaksfjkls">
-                <!-- <textarea name="product" cols="40" rows="2"></textarea> -->
               </td>
 
               <td>
                 <input class="quantity" name="quantity" type="number" min="1" value="3" >
               </td>
-
+              
               <td>
                 <input class="amount" name="amount" type="text" placeholder="0.00" value="$3">
               </td>
@@ -126,13 +126,15 @@
         </td>
       </tr>
     </table>
+
     <br>
     <button id="add-button" class="forScreen">Add item</button> <br> <br>
     <button id ="createpdf" class="forScreen">Print This Page</button>
+
   </div>
-    <!-- *****JavaScript***** -->
-    <script type="text/javascript" src="../static/js/invoice.js"></script>
-    <script type="text/javascript" src="../static/js/pdfconvert.js"></script>
+  <!-- *****JavaScript***** -->
+  <script type="text/javascript" src="../static/js/invoice.js"></script>
+  <script type="text/javascript" src="../static/js/pdfconvert.js"></script>
 
 </body>
 </html>

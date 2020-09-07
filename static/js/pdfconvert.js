@@ -1,9 +1,9 @@
 // *****Function to print/save invoice in pdf format***** //
 var printbtn = document.getElementById("createpdf");
-printbtn.addEventListener("click", hidebtnprint);
+printbtn.addEventListener("click", printPdf);
 
-function hidebtnprint() {
-    window.print();
+function printPdf() {
+  window.print();
 }
 
 // *****Function to upload image***** //
@@ -17,6 +17,6 @@ window.addEventListener('load', function() {
   });
 });
 
-function imageIsLoaded() { 
-  // alert("Your image is uploaded.");  
-}
+// function imageIsLoaded() { 
+//   alert("Your image is uploaded.");  
+// }

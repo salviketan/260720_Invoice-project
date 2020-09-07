@@ -2,8 +2,6 @@
 let addItemButton = document.querySelector("#add-button");
 addItemButton.addEventListener("click", addNewItem);
 
-
-
 // *****Function to hide first row's delete button***** //
 function hideDeleteBtn() {
   let trLength = document.querySelectorAll("tr.Item");
@@ -16,9 +14,6 @@ function hideDeleteBtn() {
     hideButton.style.visibility = "visible";
   }else {
     let hideButton = document.getElementById("hide-btn");
-    // hideButton.removeAttribute("id");
-    // hideButton.setAttribute("id", "first-btn");
-    // console.log(hideButton);
     hideButton.style.visibility = "hidden";
   }
 }
@@ -26,22 +21,18 @@ function hideDeleteBtn() {
 // *****Function to add new Item row***** //
 var rowNo = 5;
 
-
 function addNewItem() {
   // *****Get Outer table and insert new row and cell's***** //
   let mainTable = document.getElementById("main-table");
 
   // *****Added new row in outer table***** //
   let addNewRow = mainTable.insertRow(++rowNo);
-  // console.log(rowNo);
   addNewRow.setAttribute("class", "Item");
 
   // *****Added new 1st cell to outer table***** //
   let addNewCell1 = addNewRow.insertCell(0);
   addNewCell1.setAttribute("colspan", "3");
   addNewCell1.setAttribute("style", "border-bottom:2px solid #eee")
-  // let rowTable = createTable();
-  // console.log(rowTable);
 
   // *****Addend new inner table to show Item,quantity and it's price***** //
   let table = document.createElement("table");
@@ -90,6 +81,4 @@ function deleteRow(btnNo) {
   deleteTd.parentElement.remove();
   hideDeleteBtn();
   rowNo--
-  // console.log(rowNo);
-  // console.log(deleteTd);
 }
